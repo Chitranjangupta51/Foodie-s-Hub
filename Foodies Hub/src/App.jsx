@@ -17,7 +17,7 @@
      *  -Copyrights
      */
 
-const Title = (
+const Title = () => (
   <h1 id="title" key="h2">Foodies Hub</h1>
 );
 
@@ -38,10 +38,25 @@ const HeaderComponent = () => {
   );
 };
 
-// const AppLayout = () => {
-//   return (
-//     <div>Hello</div>
-//   ); 
-// }
+const Body = () =>{
+  return (
+    <h4>Body</h4>
+  )
+}
 
-export default HeaderComponent;
+const Footer = () =>{
+  return (
+    <h4>Footer</h4>
+  )
+}
+const AppLayout = () => {
+  return (
+    <>
+      <HeaderComponent />
+      <Body />
+      <Footer />
+    </>
+  ); 
+}
+
+export default AppLayout;

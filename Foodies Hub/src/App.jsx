@@ -22,7 +22,7 @@ const Title = () => (
 );
 
 //composing components
-const HeaderComponent = () => {
+const Header = () => {
   return (
     <div className="header">
       <Title />
@@ -38,9 +38,37 @@ const HeaderComponent = () => {
   );
 };
 
+const macDonald = {
+  name: "Mac Donald",
+  image: "https://img.cdn4dd.com/cdn-cgi/image/fit=contain,width=1920,format=auto,quality=50/https://doordash-static.s3.amazonaws.com/media/photosV2/cc77e58f-ae2c-4900-bae2-75feba59e7f4-retina-large.jpg",
+  cusines: ["Burger", "American"],
+  rating: "4.2"
+}
+
+const RestaurantCard = () => {
+  return (
+    <div className="card">
+      <img src={macDonald.image} alt="" />
+      <h2>{macDonald.name}</h2>
+      <h3>{macDonald.cusines.join(" , ")}</h3>
+      <h4>{macDonald.rating} Stars</h4>
+    </div>
+  )
+}
+
+
 const Body = () =>{
   return (
-    <h4>Body</h4>
+    <div className="restaurant-list">
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      
+    </div>
   )
 }
 
@@ -52,7 +80,7 @@ const Footer = () =>{
 const AppLayout = () => {
   return (
     <>
-      <HeaderComponent />
+      <Header />
       <Body />
       <Footer />
     </>
